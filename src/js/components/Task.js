@@ -29,7 +29,6 @@ export default class Task extends React.Component {
   handleClickRemove(e) {
     // 親から渡ってきた関数を実行することで、親へどのitemを削除するのか通知する
     this.props.onRemove(this.state.id);
-
     // 自身で削除できなくもないが、jQueryなどを使って直接DOMを取ってくるのはReactを使っている意味がないのでやめる。仮想DOMを使っているのだから
     // $(e.target).parent('.list__item').remove();
   }
